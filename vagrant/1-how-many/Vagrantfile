@@ -1,0 +1,39 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Every Vagrant development environment requires a box. You can search for
+# boxes at https://atlas.hashicorp.com/search.
+BOX_IMAGE = "bento/centos-8"
+NODE_COUNT = 40
+
+
+
+Vagrant.configure("2") do |config|
+  #用 vagrant 默认密钥对 ssh 登录
+  config.ssh.insert_key = false
+  #禁止虚拟机模板版本更新检查
+  config.vm.box_check_update = false   
+
+  #循环创建 n 个相同配置的虚拟机
+  (1..NODE_COUNT).each do |i|
+    config.vm.define "node#{i}" do |node_config|
+      #操作系统模板
+      node_config.vm.box = BOX_IMAGE
+      #虚拟机主机名
+      node_config.vm.hostname = "node#{i}.zenlab.local"
+      #配置 ip 地址
+      node_config.vm.network :private_network, ip: "192.168.50.#{i + 20}"
+      #设置虚拟机资源 512m 内存，1 个 vcpu
+      node_config.vm.provider :virtualbox do |vb|
+        vb.memory = 512
+        vb.cpus = 1
+      end 
+    end
+  end
+
+# 操作系统初始化脚本 
+  config.vm.provision "shell", inline: <<-SHELL
+    # 配置统一的虚拟机登录提示信息
+    sh -c "echo 'Welcome to DevOps Coach Labs!'" 
+  SHELL
+end
