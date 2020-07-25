@@ -9,6 +9,7 @@ NODE_COUNT = 40
 
 
 Vagrant.configure("2") do |config|
+  
   #用 vagrant 默认密钥对 ssh 登录
   config.ssh.insert_key = false
   #禁止虚拟机模板版本更新检查
@@ -29,11 +30,12 @@ Vagrant.configure("2") do |config|
         vb.cpus = 1
       end 
     end
+
   end
 
-# 操作系统初始化脚本 
+  # 操作系统初始化脚本 
   config.vm.provision "shell", inline: <<-SHELL
     # 配置统一的虚拟机登录提示信息
-    sh -c "echo 'Welcome to DevOps Coach Labs!'" 
+    sudo sh -c "echo 'Welcome to DevOps Coach Labs!' > /etc/motd"
   SHELL
 end
