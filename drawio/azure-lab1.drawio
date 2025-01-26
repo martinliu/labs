@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="puMhh2L70oH89jfP2-rF">
+    <mxGraphModel dx="1341" dy="1155" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EHkKsettXymK-FAfBPv7-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="110" y="300" width="420" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="EHkKsettXymK-FAfBPv7-5" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=7;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="EHkKsettXymK-FAfBPv7-6">
+          <mxGeometry width="420" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="EHkKsettXymK-FAfBPv7-4" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;imageBackground=default;" vertex="1" parent="EHkKsettXymK-FAfBPv7-6">
+          <mxGeometry x="10" y="290" width="33.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EHkKsettXymK-FAfBPv7-7" value="vnet-1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="140" y="600" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
